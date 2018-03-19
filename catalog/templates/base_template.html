@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block title %}<title>Travel With a Book!</title>{% endblock %}
+    <meta charset="UTF-8">
+
+    <!-- Add additional CSS in static file here -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-sm-2">
+                {% block sidebar %}
+                <ul class="sidebar-nav">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'books' %}">All books</a></li>
+                    <li><a href="{% url 'locations' %}">All locations</a></li>
+                    Contribute
+                    <li><a href="{% url 'add-book' %}">Add book entry</a></li>
+                    <li><a href="{% url 'add-location' %}">Add location entry</a></li>
+                </ul>
+                {% endblock %}
+            </div>
+            <div clas="col-sm-10">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

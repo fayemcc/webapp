@@ -1,0 +1,12 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <h1>{{ location.name }}</h1>
+    <h2>{{ location.country }}</h2>
+
+    <p>
+        <strong>About {{ location.name }}:</strong> <br />
+        {{ location.description }}
+    </p>
+
+{% endblock %}
