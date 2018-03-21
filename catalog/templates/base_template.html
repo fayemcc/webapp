@@ -1,38 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    {% block title %}<title>Travel With a Book!</title>{% endblock %}
-    <meta charset="UTF-8">
-
-    <!-- Add additional CSS in static file here -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-
-<body>
-
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-sm-2">
-                {% block sidebar %}
-                <ul class="sidebar-nav">
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'books' %}">All books</a></li>
-                    <li><a href="{% url 'locations' %}">All locations</a></li>
-                    Contribute
-                    <li><a href="{% url 'add-book' %}">Add book entry</a></li>
-                    <li><a href="{% url 'add-location' %}">Add location entry</a></li>
-                </ul>
-                {% endblock %}
-            </div>
-            <div clas="col-sm-10">
-                {% block content %}{% endblock %}
-            </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block head %}
+        <title>Travel with a Book</title>
+        {% endblock %}
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Travel with a Book</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                     <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catalog<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'books' %}">All books</a></li>
+                            <li><a href="{% url 'locations' %}">All locations</a></li>
+                        </ul>
+                </li>
+              </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My profile</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">My contributions</li>
+                            <li><a href="#">My books</a></li>
+                            <li><a href="#">My places</a></li>
+                            <li><a href="{% url 'contribute-choose' %}">Contribute</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="{% url 'logout' %}">Log out</a>
+                        </ul>
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </nav>
         </div>
-
-    </div>
-
-</body>
+        <div class="container">
+            {% block content %}
+                <h1>Content</h1>
+            {% endblock %}
+        </div>
+    </body>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>

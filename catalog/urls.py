@@ -1,4 +1,5 @@
 from django.urls import path
+from django.urls import re_path
 from . import views
 
 urlpatterns = [
@@ -11,6 +12,5 @@ urlpatterns = [
     path('locations/', views.LocationListView.as_view(), name='locations'),
     path('location/<int:pk>', views.LocationDetailView.as_view(), name='location-details'),
     path('mycontributions/add/location/', views.LocationCreate.as_view(), name='add-location'),
-    # USers
-    #path('signup/', views.UserCreate.as_view(), name='add-user'),
+
 ]

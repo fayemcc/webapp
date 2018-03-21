@@ -1,0 +1,11 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary btn-lg btn-block" href="{% url 'add-book' %}" role="button">Add book</a>
+</div>
+<div class="d-flex justify-content-center">
+    <a class="btn btn-primary btn-lg btn-block" href="{% url 'add-location'%}" role="button">Add location</a>
+</div>
+
+{% endblock %}
