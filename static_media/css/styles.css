@@ -1,0 +1,76 @@
+body {
+    font-family : "Bookman Old Style";
+    text-decoration-color : black;
+} 
+mark {
+    background-color: rgba(255, 247, 0, 0.227);
+    color: black;
+    padding-top: 0.0em;
+    padding-bottom: 0.0em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+a:link {
+    color : rgb(73, 72, 72);
+}
+a:hover {
+    color : grey;
+}
+
+.subhead {
+    font-size: 18px;
+    word-spacing: 15px;
+}
+.display-1 {
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 60px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h1 {
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 26px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+p {
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 18px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+.index-img {
+    max-height : 200px;
+    width : auto;
+    align-content: center;
+}

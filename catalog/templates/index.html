@@ -1,12 +1,46 @@
+<!DOCTYPE html>
 {% extends "base_template.html" %}
+{% load staticfiles %}
+
 
 {% block content %}
-<h1>Travel With a Book</h1>
 
-<p><a href="{% url 'signup' %}">Sign up</a></p>
+<div class="row"> <!-- big box row -->
+    <div class="col-xs-12">
+        <p class="text-center subhead"><strong>Literature. Travel. Community.</strong></p>
+        <br><br>
+        <p class="display-1 text-center"><mark>Travel With a Book</mark></p>
+        <br><br>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6">
+        <p>Hello. We are Travel With A Book. We host a new kind of atlas; powered by adventurers like you, dedicated to bringing maps alive and transforming classic literature into the travel guide of the future. </p>
+        <br>
+        <p>Ready to start your journey? Click here to <a href="{% url 'signup' %}">sign up</a>!</p>
+    </div>
+    <div class="col-xs-3"></div>
+</div>
 
 <hr>
-<p>Most viewed book</p>
-<p>Most viewed location</p>
+
+<div class="row align-items-center"> <!-- two box row -->
+    <div class="col-xs-6">
+        <p class="h4 text-center">Most viewed book</p>
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "looking_for_alaska.jpg" %}" alt="Most viewed book">
+            <p>Looking for Alaska <br> <small>by John Green</small></p>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <p class="h4 text-center">Most viewed location</p>
+        <div class="text-center">
+                <img class="img-rounded index-img" src="{% static "Sitka_Alaska.jpg" %}" alt="Most viewed location">
+                <p>Sitka, Alaska <br> <small>USA</small></p>
+        </div>
+    </div>
+</div>
+      
 
 {% endblock %}
