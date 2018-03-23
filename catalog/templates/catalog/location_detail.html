@@ -1,8 +1,16 @@
 {% extends "base_template.html" %}
+{% load staticfiles %}
 
 {% block content %}
-    <h1>{{ location.name }}</h1>
-    <h2>{{ location.country }}</h2>
+    <hr>
+    <p class="display-1">{{ location.name }}</p>
+    <p><strong><a href="">{{ location.country }}</a></strong> </p>
+    <hr>
+
+    <div>
+        <p class="text-center"> <img src="{% static "Sitka_Alaska.jpg" %}" style="height:300px"></p>
+    </div>
+    <br><br>
 
     <p>
         <strong>About {{ location.name }}:</strong> <br />

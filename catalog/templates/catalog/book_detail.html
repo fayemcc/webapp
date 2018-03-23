@@ -1,9 +1,16 @@
 {% extends "base_template.html" %}
+{% load staticfiles %}
 
 {% block content %}
-    <h1>Title: {{ book.title }}</h1>
+    <hr>
+    <p class="display-1">{{ book.title }}</p>
+    <p><strong>by </strong> <a href="">{{ book.author }}</a></p>
+    <hr>
 
-    <p><strong>Author:</strong> <a href="">{{ book.author }}</a></p>
+    <div>
+        <p class="text-center"> <img src="{% static "looking_for_alaska.jpg" %}" style="height:300px"></p>
+    </div>
+
     <p><strong>Summary:</strong>{{ book.summary }}</p>
     <p><strong>ISBN:</strong>{{ book.isbn }}</p>
 

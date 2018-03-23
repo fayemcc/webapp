@@ -16,6 +16,9 @@ a:link {
 a:hover {
     color : grey;
 }
+a:visited {
+    color : rgb(73, 72, 72);
+}
 
 .subhead {
     font-size: 18px;
@@ -24,6 +27,14 @@ a:hover {
 .display-1 {
     font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
 	font-size: 60px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+.display-1 {
+    font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+	font-size: 45px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;

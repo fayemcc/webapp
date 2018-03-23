@@ -1,15 +1,22 @@
 {% extends "base_template.html" %}
+{% load staticfiles %}
 
 {% block content %}
-    <h1>All locations</h1>
+    <br>
+    <p class="display-1 text-center">Explore by location</p>   
+    <hr> 
 
     {% if location_list %}
     <ul>
 
         {% for location in location_list %}
-        <li>
-            <a href="{{ location.get_absolute_url }}">{{ location.name }}</a> ({{ location.country }})
-        </li>
+            <div class="media">
+                <p class="text-center"><img class="mr-3" src="{% static "map_icon.png" %}" alt="Generic location image"></p>
+                <div class="media-body">
+                      <h1 class="mt-0"><a href="{{ location.get_absolute_url }}">{{ location.name }}</a> , {{ location.country }}</h1>
+                      {{ location.description }}
+                </div> 
+            </div>
         {% endfor %}
 
     </ul>
