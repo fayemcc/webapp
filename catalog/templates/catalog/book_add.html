@@ -1,7 +1,14 @@
 {% extends "base_template.html" %}
 
 {% block content %}
-<h1>Add a Book</h1>
+<br>
+<p class="display-1">Add a book</p> 
+<br>
+<p class="display-5">Please include a brief overview of this book that is both accurate and descriptive. </p>
+<p class="display-5">Use the summary field to include and cite important quotations pertaining to travel destinations. </p>
+<p class="display-5">Please avoid spoilers.</p>  
+<br><br>
+
 <form action="" method="post">
     {% csrf_token %}
     <table>
