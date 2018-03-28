@@ -1,11 +1,54 @@
 {% extends "base_template.html" %}
+{% load staticfiles %}
 
 {% block content %}
 <br>
+<hr>
+<p class="display-1 text-center"><strong>Ready to Contribute?</strong></p> 
+<br>
+<div class="row align-items-center"> <!-- six box row -->
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "hunchback.jpg" %}" alt="Hunchback of Notredame">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "wrinkleintime.jpg" %}" alt="Wrinkle in time">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "tess.jpg" %}" alt="Tess of the D'Urbervilles">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "earnest.jpg" %}" alt="The Importance of Being Earnest">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "sherlock.jpg" %}" alt="SHerlock Holmes">
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div class="text-center">
+            <img class="img-rounded index-img" src="{% static "gatsby.jpg" %}" alt="The Great Gatsby">
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+
+<p class="text-center strong"> Need examples? Click <a href="catalog/books">here</a> to explore books added by other users.</p> 
+<br><br>
+
+<br>
 <p class="display-1">Add a book</p> 
 <br>
-<p class="display-5">Please include a brief overview of this book that is both accurate and descriptive. </p>
-<p class="display-5">Use the summary field to include and cite important quotations pertaining to travel destinations. </p>
+<p class="display-5">Please include a brief overview of plot and setting that is both accurate and descriptive. </p>
+<p class="display-5">Use the summary field to include and cite important quotations. </p>
 <p class="display-5">Please avoid spoilers.</p>  
 <br><br>
 
